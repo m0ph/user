@@ -13,8 +13,8 @@ agent any
                     sh '''
                     docker rm -f $DOCKER_IMAGE
                     docker rm -f $DOCKER_IMAGE_DB
-                    docker build -t $DOCKER_ID/$DOCKER_IMAGE:$DOCKER_TAG /docker/user
-                    docker build -t $DOCKER_ID/$DOCKER_IMAGE_DB:$DOCKER_TAG /docker/user-db
+                    docker build -t $DOCKER_ID/$DOCKER_IMAGE:$DOCKER_TAG ./docker/user
+                    docker build -t $DOCKER_ID/$DOCKER_IMAGE_DB:$DOCKER_TAG ./docker/user-db
                     '''
                 }
             }
