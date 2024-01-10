@@ -10,7 +10,7 @@ RUN apk add git
 RUN apk upgrade
 RUN git config --global http.postBuffer 4096M 
 RUN go get -v github.com/Masterminds/glide
-RUN cd ${sourcesdir} && glide install
+RUN cd ${sourcesdir} && glide up
 RUN cd ${sourcesdir} && go install
 
 ENTRYPOINT user
