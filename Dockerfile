@@ -9,7 +9,7 @@ RUN apk update
 RUN apk add git
 RUN apk upgrade
 RUN git config --global http.postBuffer 4096M 
-RUN go get -v github.com/Masterminds/glide && cd ${sourcesdir} &&  && 
+RUN go get -v github.com/Masterminds/glide && cd ${sourcesdir}
 RUN glide install
 RUN go install
 
